@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faiz Modak | APAC Technology Search & Talent Intelligence</title>
+  <meta name="description" content="APAC technology and AI talent partner helping founders, CTOs and regional leaders build high-performing engineering, AI and leadership teams across Singapore and APAC." />
+  <style>
+    :root {
+      --navy: #07182b;
+      --blue: #163a70;
+      --teal: #2da9bf;
+      --light: #f4f8fb;
+      --ink: #172033;
+      --muted: #667085;
+      --white: #ffffff;
+      --line: #d9e4ec;
+      --shadow: 0 20px 50px rgba(7, 24, 43, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .hero {
+      background: radial-gradient(circle at 82% 18%, rgba(45,169,191,.25), transparent 26%), linear-gradient(135deg, var(--navy), #0b2542 60%, #0f3156);
+      color: var(--white);
+      padding: 34px 0 84px;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
+    .mark { width: 42px; height: 42px; border-radius: 13px; background: var(--white); color: var(--blue); display: grid; place-items: center; font-weight: 900; }
+    .navlinks { display: flex; gap: 18px; font-size: 14px; color: rgba(255,255,255,.78); }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 44px; align-items: center; padding-top: 80px; }
+    .eyebrow { color: #9ce3ee; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+    h1 { margin: 14px 0 20px; font-size: clamp(42px, 7vw, 78px); line-height: .96; letter-spacing: -.06em; }
+    .hero p { font-size: 20px; color: rgba(255,255,255,.82); max-width: 760px; margin: 0 0 28px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 34px; }
+    .badge { border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.08); padding: 10px 14px; border-radius: 999px; font-size: 14px; color: rgba(255,255,255,.9); }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 750; transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--teal); color: var(--white); box-shadow: 0 14px 30px rgba(45,169,191,.28); }
+    .btn-secondary { border: 1px solid rgba(255,255,255,.28); color: var(--white); }
+    .profile-card { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); border-radius: 28px; padding: 28px; box-shadow: var(--shadow); backdrop-filter: blur(10px); }
+    .profile-avatar { width: 110px; height: 110px; border-radius: 28px; background: linear-gradient(135deg, #fff, #b8eef5); color: var(--blue); display: grid; place-items: center; font-size: 38px; font-weight: 900; margin-bottom: 22px; }
+    .profile-card h3 { margin: 0 0 6px; font-size: 24px; }
+    .profile-card p { font-size: 15px; margin: 0 0 18px; }
+    .contact-mini { display: grid; gap: 10px; color: rgba(255,255,255,.86); font-size: 14px; }
+    section { padding: 84px 0; }
+    .section-title { font-size: clamp(30px, 4vw, 48px); line-height: 1.06; letter-spacing: -.04em; margin: 0 0 16px; color: var(--navy); }
+    .section-lead { color: var(--muted); font-size: 18px; max-width: 820px; margin: 0 0 38px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat, .card, .search-card { background: var(--white); border: 1px solid var(--line); border-radius: 22px; padding: 24px; box-shadow: 0 8px 24px rgba(7,24,43,.05); }
+    .stat strong { display: block; color: var(--teal); font-size: 38px; line-height: 1; letter-spacing: -.04em; }
+    .stat span { color: var(--muted); font-size: 14px; }
+    .light { background: var(--light); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .card h3, .search-card h3 { margin: 0 0 12px; color: var(--navy); font-size: 21px; }
+    ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    li { margin: 7px 0; }
+    .process { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+    .step { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 18px; min-height: 150px; }
+    .step-num { width: 34px; height: 34px; border-radius: 50%; background: var(--light); color: var(--teal); font-weight: 900; display: grid; place-items: center; margin-bottom: 12px; }
+    .step h4 { margin: 0 0 8px; color: var(--navy); font-size: 15px; }
+    .step p { margin: 0; color: var(--muted); font-size: 13px; }
+    .search-card { border-top: 4px solid var(--teal); }
+    .tag { display: inline-block; background: #e9f8fb; color: #147486; border-radius: 999px; padding: 5px 10px; font-size: 12px; font-weight: 800; margin-bottom: 14px; }
+    .quote { background: var(--navy); color: var(--white); border-radius: 28px; padding: 44px; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
+    .quote h2 { margin: 0; font-size: clamp(30px, 4vw, 54px); line-height: 1.05; letter-spacing: -.045em; }
+    .quote p { margin: 12px 0 0; color: rgba(255,255,255,.76); }
+    footer { background: #061323; color: rgba(255,255,255,.72); padding: 34px 0; }
+    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; align-items: center; }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .grid-2, .quote { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .navlinks { display: none; }
+    }
+    @media (max-width: 560px) {
+      .stats, .process { grid-template-columns: 1fr; }
+      .hero { padding-bottom: 56px; }
+      section { padding: 58px 0; }
+      .container { width: min(100% - 28px, 1120px); }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="nav">
+        <div class="brand"><div class="mark">FM</div><span>Faiz Modak</span></div>
+        <div class="navlinks">
+          <a href="#expertise">Expertise</a>
+          <a href="#searches">Recent Searches</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">APAC Technology Search & Talent Intelligence</div>
+          <h1>Build high-impact AI, engineering and leadership teams in APAC.</h1>
+          <p>I partner with founders, CTOs, CIOs and regional leaders scaling technology teams across Singapore, Hong Kong, Japan and Southeast Asia.</p>
+          <div class="badges">
+            <div class="badge">15+ years specialist technology search</div>
+            <div class="badge">100+ senior & leadership placements</div>
+            <div class="badge">Singapore • Hong Kong • Japan • SEA</div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:faiz@wenetworkasia.com?subject=APAC%20Hiring%20Consultation">Schedule a Call</a>
+            <a class="btn btn-secondary" href="Faiz_Modak_Portfolio.pdf" target="_blank">Download Portfolio</a>
+          </div>
+        </div>
+        <aside class="profile-card">
+          <div class="profile-avatar">FM</div>
+          <h3>Faiz Modak</h3>
+          <p>Director, Singapore at WeNetwork. Former Technology Practice Lead at Robert Walters Singapore.</p>
+          <div class="contact-mini">
+            <a href="mailto:faiz@wenetworkasia.com">faiz@wenetworkasia.com</a>
+            <a href="tel:+6591717154">+65 9171 7154</a>
+            <a href="https://linkedin.com/in/faizmodak" target="_blank">linkedin.com/in/faizmodak</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">A search partner for companies entering and scaling across APAC.</h2>
+        <p class="section-lead">I help companies access passive talent, understand the market, benchmark compensation and make strategic hires across AI, engineering, fintech, trading technology, digital assets and infrastructure.</p>
+        <div class="stats">
+          <div class="stat"><strong>15+</strong><span>Years in specialist technology recruitment</span></div>
+          <div class="stat"><strong>100+</strong><span>Leadership and senior placements</span></div>
+          <div class="stat"><strong>7</strong><span>Key APAC markets covered</span></div>
+          <div class="stat"><strong>3–5</strong><span>Business days for typical initial shortlist</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="light">
+      <div class="container">
+        <h2 class="section-title">Specialist areas</h2>
+        <p class="section-lead">Focused on high-impact roles where market access, credibility and passive candidate engagement matter.</p>
+        <div class="grid-3">
+          <div class="card"><h3>AI & Data</h3><ul><li>AI Engineers</li><li>Machine Learning Scientists</li><li>LLM / GenAI Specialists</li><li>Data Engineering</li><li>ML Platform</li></ul></div>
+          <div class="card"><h3>Software Engineering</h3><ul><li>Staff Engineers</li><li>Backend & Distributed Systems</li><li>Developer Infrastructure</li><li>SRE / DevOps</li><li>Cloud & Platform</li></ul></div>
+          <div class="card"><h3>FinTech & Trading</h3><ul><li>Trading Technology</li><li>Digital Assets</li><li>Payments</li><li>Capital Markets</li><li>Digital Banking</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">How I support clients</h2>
+        <p class="section-lead">Beyond recruitment: access, insight and execution support from market mapping through offer close.</p>
+        <div class="process">
+          <div class="step"><div class="step-num">1</div><h4>Discovery</h4><p>Define hiring objectives, success criteria and role positioning.</p></div>
+          <div class="step"><div class="step-num">2</div><h4>Market Mapping</h4><p>Map target companies, talent pools and compensation expectations.</p></div>
+          <div class="step"><div class="step-num">3</div><h4>Targeted Outreach</h4><p>Engage passive talent through trusted networks and direct search.</p></div>
+          <div class="step"><div class="step-num">4</div><h4>Qualification</h4><p>Validate experience, motivation, communication and cultural alignment.</p></div>
+          <div class="step"><div class="step-num">5</div><h4>Shortlist</h4><p>Deliver qualified candidates with insight-led recommendations.</p></div>
+          <div class="step"><div class="step-num">6</div><h4>Offer Support</h4><p>Support negotiation, counter-offer management and onboarding.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="searches" class="light">
+      <div class="container">
+        <h2 class="section-title">Recent search themes</h2>
+        <p class="section-lead">Examples of the types of high-impact hiring challenges I support across the region.</p>
+        <div class="grid-3">
+          <div class="search-card"><span class="tag">AI Infrastructure</span><h3>Founding Platform Engineers</h3><p>Shortlisted senior engineering talent for a high-growth technology business building in Singapore.</p></div>
+          <div class="search-card"><span class="tag">Digital Assets</span><h3>Engineering & Infrastructure Scale-Up</h3><p>Supported rapid engineering, DevOps and infrastructure hiring for a global crypto exchange in Singapore.</p></div>
+          <div class="search-card"><span class="tag">FinTech</span><h3>Product, Cloud & Engineering Teams</h3><p>Built regional product and technology capability across Singapore and Hong Kong.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">What I am seeing in the market</h2>
+        <div class="grid-2">
+          <div class="card"><h3>AI & Engineering Talent</h3><ul><li>Senior AI and platform engineers remain highly contested.</li><li>Passive candidate engagement is outperforming job-post driven hiring.</li><li>Equity, ownership and technical challenge are increasingly important.</li></ul></div>
+          <div class="card"><h3>APAC Expansion</h3><ul><li>Singapore remains a preferred landing point for regional technology teams.</li><li>Japan and Southeast Asia hiring often requires localised market messaging.</li><li>Companies that move quickly secure stronger candidates.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="light">
+      <div class="container">
+        <div class="quote">
+          <div>
+            <h2>Planning to hire in APAC?</h2>
+            <p>Whether you are building a founding team or scaling an established business, I am happy to share market intelligence and discuss the talent landscape.</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:faiz@wenetworkasia.com?subject=APAC%20Hiring%20Consultation">Contact Faiz</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© Faiz Modak | WeNetwork Singapore</div>
+      <div class="footer-links">
+        <a href="mailto:faiz@wenetworkasia.com">Email</a>
+        <a href="tel:+6591717154">Phone</a>
+        <a href="https://linkedin.com/in/faizmodak" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
